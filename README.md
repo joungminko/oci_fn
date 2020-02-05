@@ -35,4 +35,16 @@ docker images | grep nodeapp
 ```
 fn list apps
 ```
-2.3. list by fn functions 
+2.3. get detail information from fn apps name, and ID information can be used to invoke function via RESTful API call
+```
+fn list functions "name of fn"
+```
+3. run
+3.1. run via bash
+```
+echo -n '{"name":"Bob"}' | fn invoke nodeapp nodefn --content-type application/json
+```
+3.2. run via RESTful API call, use function ID after invoke context of URL 
+```
+curl -X "POST" -H "Content-Type: application/json" http://localhost:8080/invoke/01E09V1EK0NG8G00GZJ0000002
+```
