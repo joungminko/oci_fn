@@ -19,6 +19,10 @@ fn use context default
 4.1. add to running PATH
 
 ### # example for node developer
+0. set environment runtime as node.js
+```
+fn init --runtime node nodefn
+```
 1. create app by fn(it creates the sample of node.js app for fn)
 ```
 fn create app nodeapp
